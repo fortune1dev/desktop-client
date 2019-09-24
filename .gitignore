@@ -1,0 +1,22 @@
+build*
+bin/
+bin32/
+bin_debug/
+bin32_debug/
+
+Windows Installer/Debug/
+Windows Installer/Release/
+Windows Installer/.vs/
+
+Windows Installer/*.msi
+Windows Installer/*.wixobj
+Windows Installer/*.wixpdb
+
+build-bytecoin-gui*
+.vs/
+*~
+CMakeLists.txt.user*
+*.pro.user*
+
+# Mac specific
+.DS_Store
