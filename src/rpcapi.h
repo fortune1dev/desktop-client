@@ -138,7 +138,7 @@ struct Transaction
     Hash inputs_hash;
     Amount fee = 0;
     QString public_key;
-    QString extra;
+    //QString extra;
     bool coinbase = false;
     Amount amount = 0;
 
@@ -163,7 +163,7 @@ struct Transaction
             inputs_hash,
             fee,
             public_key,
-            extra,
+            //extra,
             coinbase,
             amount,
             block_height,

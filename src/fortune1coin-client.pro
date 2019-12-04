@@ -31,19 +31,19 @@ contains(QT_ARCH, i386) {
     message("32-bit")
     Release:DESTDIR = $$PWD/../bin32
     Debug:DESTDIR = $$PWD/../bin32_debug/
-    WALLETD_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/walletd.exe"))
+    WALLETD_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/Release/walletd.exe"))
     Debug:WALLETD2_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/walletd.pdb"))
-    fortune1coind_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/fortune1coind.exe"))
+    fortune1coind_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/Release/fortune1coind.exe"))
     Debug:fortune1coind2_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/fortune1coind.pdb"))
-    miner_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/minerd.exe"))
+    miner_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/Release/minerd.exe"))
     Debug:miner2_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin32/minerd.pdb"))
 } else {
     message("64-bit")
-    WALLETD_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/walletd.exe"))
+    WALLETD_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/Release/walletd.exe"))
     Debug:WALLETD2_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/walletd.pdb"))
-    fortune1coind_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/fortune1coind.exe"))
+    fortune1coind_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/Release/fortune1coind.exe"))
     Debug:fortune1coind2_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/fortune1coind.pdb"))
-    miner_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/minerd.exe"))
+    miner_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/Release/minerd.exe"))
     Debug:miner2_BY_SRC_PATH = $$shell_path($$clean_path("$$PWD/../../fortune1coin/bin/minerd.pdb"))
 }
 
@@ -239,15 +239,15 @@ RESOURCES += \
 
 contains(QT_ARCH, i386) {
     message("32-bit")
-    win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../fortune1coin/libs32/bytecoin-crypto.lib
+    win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../fortune1coin/libs32/Release/bytecoin-crypto.lib
     else:unix|win32-g++: PRE_TARGETDEPS += $$PWD/../../fortune1coin/libs32/libbytecoin-crypto.a
-    unix|win32: LIBS += -L$$PWD/../../fortune1coin/libs32/ -lbytecoin-crypto
+    unix|win32: LIBS += -L$$PWD/../../fortune1coin/libs32/Release -lbytecoin-crypto
 
 } else {
     message("64-bit")
-    win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../fortune1coin/libs/bytecoin-crypto.lib
+    win32:!win32-g++: PRE_TARGETDEPS += $$PWD/../../fortune1coin/libs/Release/bytecoin-crypto.lib
     else:unix|win32-g++: PRE_TARGETDEPS += $$PWD/../../fortune1coin/libs/libbytecoin-crypto.a
-    unix|win32: LIBS += -L$$PWD/../../fortune1coin/libs/ -lbytecoin-crypto
+    unix|win32: LIBS += -L$$PWD/../../fortune1coin/libs/Release -lbytecoin-crypto
 }
 
 

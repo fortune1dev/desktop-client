@@ -112,8 +112,8 @@ QVariant WalletModel::headerData(int section, Qt::Orientation orientation, int r
             return tr("Unlock time");
         case COLUMN_ANONYMITY:
             return tr("Anonymity");
-        case COLUMN_EXTRA:
-            return tr("Extra");
+//        case COLUMN_EXTRA:
+//            return tr("Extra");
         case COLUMN_COINBASE:
             return tr("Base");
         case COLUMN_BLOCK_HASH:
@@ -659,8 +659,8 @@ QVariant WalletModel::getDisplayRoleHistory(const QModelIndex& index) const
         return formatAmount(tx.fee);
     case COLUMN_PK:
         return tx.public_key;
-    case COLUMN_EXTRA:
-        return tx.extra;
+//    case COLUMN_EXTRA:
+//        return tx.extra;
     case COLUMN_COINBASE:
         return tx.coinbase;
     case COLUMN_AMOUNT:
@@ -749,8 +749,8 @@ QVariant WalletModel::getUserRoleHistory(const QModelIndex& index, int role) con
         return tx.fee;
     case ROLE_PK:
         return tx.public_key;
-    case ROLE_EXTRA:
-        return tx.extra;
+//    case ROLE_EXTRA:
+//        return tx.extra;
     case ROLE_COINBASE:
         return tx.coinbase;
     case ROLE_AMOUNT:

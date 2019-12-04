@@ -47,7 +47,7 @@ const char COMMUNITY_FORUM_URL[] = "https://bitcointalk.org/index.php?topic=5182
 const char COMMUNITY_SITE_URL[] = "https://fortune1.money/";
 const char COMMUNITY_TWITTER_URL[] = "https://twitter.com/Fortune1Coin";
 const char COMMUNITY_REDDIT_URL[] = "https://www.reddit.com/user/Fortune1Coin";
-const char REPORT_ISSUE_URL[] = "https://fortune1.money/about/";
+const char REPORT_ISSUE_URL[] = "https://github.com/fortune1dev/desktop-client/issues";
 const char DOWNLOAD_URL[] = "https://fortune1.money/";
 
 const char BUTTON_STYLE_SHEET[] =
@@ -183,6 +183,7 @@ MainWindow::MainWindow(
     connect(m_ui->m_actionForum, SIGNAL(triggered()), this, SLOT(communityForumTriggered()));
     connect(m_ui->m_actionTwitter, SIGNAL(triggered()), this, SLOT(communityTwitterTriggered()));
     connect(m_ui->m_actionReddit, SIGNAL(triggered()), this, SLOT(communityRedditTriggered()));
+    connect(m_ui->m_actionReportIssue, SIGNAL(triggered()), this, SLOT(reportIssueTriggered()));
 
     m_ui->m_sendFrame->setWalletModel(walletModel_);
     m_ui->m_sendFrame->setMainWindow(this);

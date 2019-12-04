@@ -78,6 +78,8 @@ MiningFrame::MiningFrame(QWidget* _parent)
   m_restorePoolListButton->setFixedWidth(200);
   m_restorePoolListButton->setText(tr("Restore default pool list"));
   m_restorePoolListButton->hide();
+  m_ui->m_cpuCoresCombo->hide();
+  m_ui->label->hide();
 
   connect(m_restorePoolListButton, &QPushButton::clicked, m_restorePoolListButton, &QPushButton::hide);
   connect(m_restorePoolListButton, &QPushButton::clicked, this, &MiningFrame::restoreDefaultPoolsClicked);

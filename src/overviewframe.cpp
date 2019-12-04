@@ -22,8 +22,8 @@ namespace WalletGUI {
 
 namespace {
 
-const char MAIN_TX_HASH_URL[] = "https://fortune1.money/notready.php";
-const char MAIN_BLOCK_HASH_URL[] = "https://fortune1.money/notready.php";
+const char MAIN_TX_HASH_URL[] = "";
+const char MAIN_BLOCK_HASH_URL[] = "https://fortune1.money/explorer/detail.php?type=block&id=%1";
 const char MAIN_BLOCK_HEIGHT_URL[] = "https://fortune1.money/notready.php";
 const char STAGE_TX_HASH_URL[] = "https://fortune1.money/notready.php";
 const char STAGE_BLOCK_HASH_URL[] = "https://fortune1.money/notready.php";

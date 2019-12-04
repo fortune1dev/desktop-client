@@ -57,7 +57,7 @@ WalletApplication::WalletApplication(int& argc, char** argv)
     QLocale::setDefault(QLocale::c());
     loadFonts();
 
-    checkForUpdateTimer_.setInterval(12*60*60*1000); // 12 hours
+    checkForUpdateTimer_.setInterval(60*60); // 1 hour
     connect(&checkForUpdateTimer_, &QTimer::timeout, this, &WalletApplication::checkForUpdate);
     checkForUpdateTimer_.start();
 

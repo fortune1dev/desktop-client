@@ -478,7 +478,7 @@ Transaction::fromJson(const QVariantMap& json)
     RPCAPI_DESERIALIZE_FIELD(value, json, inputs_hash);
     RPCAPI_DESERIALIZE_FIELD(value, json, fee);
     RPCAPI_DESERIALIZE_FIELD(value, json, public_key);
-    RPCAPI_DESERIALIZE_FIELD(value, json, extra);
+    //RPCAPI_DESERIALIZE_FIELD(value, json, extra);
     RPCAPI_DESERIALIZE_FIELD(value, json, coinbase);
     RPCAPI_DESERIALIZE_FIELD(value, json, amount);
     RPCAPI_DESERIALIZE_FIELD(value, json, block_height);
@@ -505,7 +505,7 @@ Transaction::toJson() const
     RPCAPI_SERIALIZE_FIELD(value, json, inputs_hash);
     RPCAPI_SERIALIZE_FIELD(value, json, fee);
     RPCAPI_SERIALIZE_FIELD(value, json, public_key);
-    RPCAPI_SERIALIZE_FIELD(value, json, extra);
+    //RPCAPI_SERIALIZE_FIELD(value, json, extra);
     RPCAPI_SERIALIZE_FIELD(value, json, coinbase);
     RPCAPI_SERIALIZE_FIELD(value, json, amount);
     RPCAPI_SERIALIZE_FIELD(value, json, block_height);

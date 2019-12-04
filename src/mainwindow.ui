@@ -930,10 +930,17 @@
     <addaction name="m_actionReddit"/>
     <addaction name="m_actionTwitter"/>
    </widget>
+   <widget class="QMenu" name="menuReportIssue">
+    <property name="title">
+     <string>Report issue</string>
+    </property>
+    <addaction name="m_actionReportIssue"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuTools"/>
-   <addaction name="menuHelp"/>
    <addaction name="menuCommunity"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuReportIssue"/>
   </widget>
   <widget class="WalletGUI::WalletStatusBar" name="statusBar"/>
   <action name="m_exitAction">
@@ -1063,6 +1070,11 @@
   <action name="m_actionTwitter">
    <property name="text">
     <string>Twitter</string>
+   </property>
+  </action>
+  <action name="m_actionReportIssue">
+   <property name="text">
+    <string>Report issue</string>
    </property>
   </action>
  </widget>
