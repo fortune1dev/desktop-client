@@ -1,7 +1,7 @@
 IDI_ICON1               ICON    "images\bytecoin.ico"
 
-#define bytecoin_VERSION_WINDOWS_COMMA 1, 19, 11, 28
-#define bytecoin_VERSION_STRING "v1.0.0"
+#define bytecoin_VERSION_WINDOWS_COMMA 1, 20, 04, 13
+#define bytecoin_VERSION_STRING "v1.2.0"
 
 #include <windows.h>
 
@@ -22,7 +22,7 @@ BEGIN
             VALUE "FileDescription", "Fortune1Coin"
             VALUE "FileVersion", bytecoin_VERSION_STRING
             VALUE "InternalName", "Fortune1Coin"
-            VALUE "LegalCopyright", "Copyright (C) Fortune1Coin Developers 2019"
+            VALUE "LegalCopyright", "Copyright (C) Fortune1Coin Developers 2019-2020"
             VALUE "OriginalFilename", "Fortune1Coin"
             VALUE "ProductName", "Fortune1Coin"
             VALUE "ProductVersion", bytecoin_VERSION_STRING

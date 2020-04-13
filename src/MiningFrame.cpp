@@ -78,8 +78,8 @@ MiningFrame::MiningFrame(QWidget* _parent)
   m_restorePoolListButton->setFixedWidth(200);
   m_restorePoolListButton->setText(tr("Restore default pool list"));
   m_restorePoolListButton->hide();
-  m_ui->m_cpuCoresCombo->hide();
-  m_ui->label->hide();
+//  m_ui->m_cpuCoresCombo->hide();
+//  m_ui->label->hide();
 
   connect(m_restorePoolListButton, &QPushButton::clicked, m_restorePoolListButton, &QPushButton::hide);
   connect(m_restorePoolListButton, &QPushButton::clicked, this, &MiningFrame::restoreDefaultPoolsClicked);
@@ -253,7 +253,7 @@ void MiningFrame::startMining() {
     QString params;
     QLabel *wallet_lable = m_mainWindow->findChild<QLabel*>("m_addressLabel");
     QString program = QCoreApplication::applicationDirPath()+"/minerd.exe";
-    QStringList arguments = QStringList() << "--wallet-address=" + wallet_lable->text();
+    QStringList arguments = QStringList() << "--wallet-address=" + wallet_lable->text() << "--threads=" + m_ui->m_cpuCoresCombo->currentText();
     m_miner_procces->setCreateProcessArgumentsModifier([](QProcess::CreateProcessArguments *args){
         args->flags |= CREATE_NEW_CONSOLE;
         args->startupInfo->dwFlags &= ~STARTF_USESTDHANDLES;

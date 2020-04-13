@@ -431,7 +431,7 @@
                   <item>
                    <widget class="QLabel" name="m_walletStatusLabel">
                     <property name="text">
-                     <string>Wallet syncronized</string>
+                     <string>Wallet synchronized</string>
                     </property>
                    </widget>
                   </item>

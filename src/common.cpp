@@ -6,6 +6,7 @@
 #include <QUrl>
 #include <QObject>
 #include <QWidget>
+#include <QDebug>
 
 #include "common.h"
 
@@ -101,9 +102,11 @@ bool parseAmount(const QString& str, qint64& amount)
     static const QChar plus = '+';
     static const QChar zero = '0';
 
+qDebug() << "First IF";
     QString trimmedStr = str.trimmed();
     if (trimmedStr.isEmpty())
         return false;
+
     const QChar first = trimmedStr[0];
     const bool negative = (first == minus);
     if (first == minus || first == plus)

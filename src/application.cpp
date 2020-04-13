@@ -10,6 +10,9 @@
 #include <QMessageBox>
 #include <QAuthenticator>
 
+#include <QTranslator>
+#include <QLibraryInfo>
+
 #include "application.h"
 #include "signalhandler.h"
 #include "logger.h"
@@ -89,6 +92,15 @@ void WalletApplication::loadFonts()
 
 bool WalletApplication::init()
 {
+    QTranslator myTranslator;
+    myTranslator.load(QString("translations/ft1_") + QLocale::system().name());
+    this->installTranslator(&myTranslator);
+
+    QTranslator qtTranslator;
+    qtTranslator.load(QString("translations/qt_") + QLocale::system().name());
+    this->installTranslator(&qtTranslator);
+
+
     const QDir dataDir = Settings::instance().getDefaultWorkDir();
     makeDataDir(dataDir);
     const QDir logsDir = dataDir.absolutePath() + "/logs";
