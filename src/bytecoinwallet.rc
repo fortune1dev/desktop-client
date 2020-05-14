@@ -1,7 +1,7 @@
 IDI_ICON1               ICON    "images\bytecoin.ico"
 
-#define bytecoin_VERSION_WINDOWS_COMMA 1, 20, 04, 13
-#define bytecoin_VERSION_STRING "v1.2.0"
+#define bytecoin_VERSION_WINDOWS_COMMA 1, 20, 05, 14
+#define bytecoin_VERSION_STRING "v1.2.2"
 
 #include <windows.h>
 

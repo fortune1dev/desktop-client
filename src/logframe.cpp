@@ -12,8 +12,8 @@
 namespace WalletGUI
 {
 
-static constexpr int MAX_LINES = 10000;
-static constexpr int MAX_TEXT_SIZE = 1024 * 1024;
+static constexpr int MAX_LINES = 250;
+static constexpr int MAX_TEXT_SIZE = 5 * 1024;
 
 LogFrame::LogFrame(QWidget *parent)
     : QFrame(parent)

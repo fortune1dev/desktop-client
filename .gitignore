@@ -3,6 +3,7 @@ bin/
 bin32/
 bin_debug/
 bin32_debug/
+*.qm
 
 Windows Installer/Debug/
 Windows Installer/Release/
